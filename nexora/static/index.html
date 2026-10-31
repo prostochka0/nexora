@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nexora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="grid"></div>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="signal"></div>
+  </div>
+
+  <main class="stage">
+    <header class="brand">
+      <div class="mark" aria-hidden="true">
+        <span class="ring"></span>
+        <span class="ring"></span>
+        <span class="core"></span>
+      </div>
+      <h1>Nexora</h1>
+    </header>
+
+    <p class="tagline">Один переключатель — интернет на вашем ПК.</p>
+
+    <section class="control" aria-labelledby="status-label">
+      <p id="status-label" class="status-text">Проверяю сеть…</p>
+
+      <button type="button" id="toggle" class="toggle" aria-pressed="false" disabled>
+        <span class="toggle-track">
+          <span class="toggle-knob"></span>
+          <span class="toggle-glow"></span>
+        </span>
+        <span class="toggle-copy">
+          <span class="toggle-state" id="toggle-state">—</span>
+          <span class="toggle-hint" id="toggle-hint">загрузка</span>
+        </span>
+      </button>
+
+      <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+    </section>
+
+    <aside class="meta" id="meta" hidden>
+      <p><span>Система</span> <strong id="meta-system">—</strong></p>
+      <p><span>Адаптеры</span> <strong id="meta-adapters">—</strong></p>
+      <p id="admin-note" class="admin" hidden>Запустите от имени администратора, иначе переключение может не сработать.</p>
+    </aside>
+  </main>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
