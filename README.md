@@ -28,21 +28,28 @@ pip install -r requirements.txt
 
 ## Запуск
 
-Обычный запуск (откроет браузер):
+### Windows (самый простой способ)
+
+1. Скачайте или клонируйте репозиторий.
+2. Дважды щёлкните **`Nexora.bat`** (или `run-nexora.bat`).
+3. Подтвердите запрос UAC (права администратора).
+4. Откроется браузер с переключателем интернета.
+
+Батник сам создаст `.venv`, поставит зависимости и запустит приложение.
+Нужен установленный [Python 3.10+](https://www.python.org/downloads/) с галочкой **Add python.exe to PATH**.
+
+### Через терминал
 
 ```bash
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
 python -m nexora
 ```
 
 ### Права администратора
 
 Без повышенных прав переключение сети часто не сработает.
-
-**Windows** — откройте терминал «от имени администратора» и выполните:
-
-```bash
-python -m nexora
-```
 
 **Linux / macOS**:
 
@@ -56,6 +63,7 @@ sudo python -m nexora
 python -m nexora --no-browser
 python -m nexora --port 8765
 ```
+
 
 ## Как это работает
 
