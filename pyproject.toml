@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nexora"
+version = "1.0.0"
+description = "Включение и отключение интернета на вашем ПК"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi==0.115.6",
+  "uvicorn[standard]==0.34.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.4"]
+
+[project.scripts]
+nexora = "nexora.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["nexora*"]
+
+[tool.setuptools.package-data]
+nexora = ["static/*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
